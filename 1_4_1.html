@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>L'informatique et son histoire</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+		<meta charset="utf-8"/>
+		<link rel="stylesheet" href="style_index.css"/>
+		<link rel="icon" href=""/>
+	</head>
+	<body>
+		<div id="page">
+      <section>
+  			<h1 id="title" align="center"><strong><U>Ruby</U></strong></h1>
+        <article>
+          <p class="alinea">Ruby est un langage de programmation libre et dynamique, qui met l'accent sur la simplicité et la productivité. Sa syntaxe élégante en facilite la lecture et l'écriture.</p>
+          <p class="alinea">Il est interprété, orienté objet, et multi-paradigme.</p>
+        </article>
+				<article>
+					<h2>Présentation</h2>
+					<h3>Instalation</h3>
+					<p class="alinea">Ruby fait partie de la collection des ports de FreeBSD. Vous pouvez donc l'installer en entrant les instructions suivantes dans un terminal :</p>
+					<div class="demo_box">
+						<div class="demo_fill">
+							<span class="green">cd</span> /usr/ports/lang/ruby
+							<br>
+							make
+							<br>
+							make install
+							<br>
+							make clean
+						</div>
+					</div>
+					<h3>Execution d'un programme</h3>
+					<p class="alinea">Pour interpréter un programme Ruby, passez simplement le nom de votre fichier principal (avec l'extension <strong>.rb</strong>) à l'interpréteur :</p>
+					<div class="demo_box">
+						<div class="demo_fill">
+							ruby fichier.rb
+						</div>
+					</div>
+				</article>
+				<article>
+					<h2>Structure d'un programme</h2>
+					<h3>Commentaires</h3>
+					<p class="alinea">Les commentaires sont tout simplement du texte dont le but est d'apporter un <strong>complément d'information</strong> concernant un élément obscur du code, afin d’en faciliter la relecture a <em>postériori</em>, et a <em>fortiori</em> la maintenance. L'information présentée doit alors être <strong>concise et précise</strong>, elle tient généralement en une seule ligne, on utilise alors le symbole #</p>
+					<div class="demo_box">
+						<div class="demo_fill">
+							<span class="commentaires"># ceci est un commentaire</span>
+						</div>
+					</div>
+					<p class="alinea">Il peut arriver d’avoir besoin d'étendre des commentaires sur plusieurs lignes : dans ce cas, au lieu de faire débuter chaque nouvelle ligne par un #, vous pouvez encadrer votre paragraphe par <strong>=begin</strong> et <strong>=end</strong>. Tout ce qui se trouvera alors entre ces deux mots sera tout bonnement ignoré.</p>
+					<div class="demo_box">
+						<div class="demo_fill">
+							<span class="commentaires">
+								=begin <br><br>
+								ceci est un commentaire <br>
+								et ceci également <br><br>
+								=end
+							</span>
+						</div>
+					</div>
+					<h3>Délimitations des instructions</h3>
+					<p class="alinea">Les instructions du programme sont usuellement séparées par un point-virgule (situé en fin de ligne).</p>
+					<p class="alinea">Contrairement à d'autres langages, Ruby vous permet d'omettre ce point-virgule si vous vous limitez à <strong>une seule instruction par ligne</strong>.</p>
+				</article>
+				<article>
+					<h2>Variables et constantes</h2>
+					<p class="alinea">Voyons maintenant comment <strong>stocker des données</strong> en Ruby dans des <strong>variables</strong> puis dans des <strong>constantes</strong>.</p>
+					<h3>Variables</h3>
+					<p class="alinea">Vous pouvez <strong>associer une donnée</strong>, une information, à un <strong>identificateur</strong>, un mot. Vous pouvez ensuite accéder à cette donnée et la modifier. Cet identificateur est alors une <strong>variable</strong>.</p>
+					<p class="alinea">Par exemple, nous pouvons associer l'entier 4 à l'identificateur x ; x est alors une variable dont la valeur est 4.</p>
+					<p class="alinea">Lorsque vous vous apprêtez à utiliser une variable, vous devez l'initialiser, c'est-à-dire lui associer une valeur (un chiffre, une chaîne de caractères, etc.), sans quoi elle se verra assigner la valeur <strong>nil</strong> (c'est l'absence de valeur).</p>
+					<p class="alinea">Pour assigner une valeur à une variable, on écrit l'identificateur, suivi du signe égal = et de la valeur à lui assigner. Cette opération est appelée <strong>instruction d'affectation</strong>, = est l'opérateur d'affectation.</p>
+					<div class="demo_box">
+						<div class="demo_title">
+							Exemple
+						</div>
+						<div class="demo_fill">
+							nom = <span class="red">"Aristote"</span> <span class="Commentaires"># une chaîne de caractères</span><br>
+							annee = 2006 <span class="Commentaires"># un entier</span><br>
+							langage = <span class="red">"Ruby"</span>
+						</div>
+					</div>
+					<p class="alinea">nom, annee, langage sont des identificateurs, des noms de variables. Leurs valeurs respectives se trouvent du côté droit de l'affectation.</p>
+					<p class="alinea"><strong>Un nom de variable ne doit pas débuter par un chiffre ou contenir d'accents !</strong></p>
+					<p class="alinea">Contrairement à d'autres langages, Ruby est typé dynamiquement : vous ne devez pas spécifier le type de vos variables à leur création, il est déduit lors de l'interprétation.</p>
+					<p class="alinea">Il existe également trois autres types de variables :</p>
+					<li class="alinea">les flottants (nombres à virgule flottante) : ce sont des décimaux. La virgule est matérialisée par un point. Pour les nombres de la forme 0.X, le 0 ne peut être omis</li>
+					<li class="alinea">les caractères : n’importe quel caractère présent sur votre clavier, il est entouré d'apostrophes ' '</li>
+					<li class="alinea">les booléens (ou valeurs booléennes) : il en existe deux types : true et false, qui correspondent respectivement à vrai et à faux. On peut faire le rapprochement avec les deux états ON et OFF d'un interrupteur. En fait, pour placer un booléen à faux on peut lui assigner deux valeurs : false ou nil (absence de valeur). Toute autre valeur équivaut à true, tout ceci nous servira dans quelques chapitres pour les conditions et les boucles.</li>
+					<h4>Récuperer une valeur</h4>
+					<p class="alinea">Les fonctions puts et print, que nous avons déjà rencontrées plus tôt, sont capables d'afficher une chaîne de caractères sur la sortie standard (console).</p>
+					<h3>Constantes</h3>
+					<p class="alinea">Les constantes remplissent la même fonction que les variables, à la différence près que vous ne devez pas modifier leur valeur tout au long du programme. Si vous le faites, vous n'obtiendrez pas d'erreur, mais un simple avertissement. Espérons que cela suffise à vous décourager.</p>
+					<p class="alinea">L'identificateur d'une constante débute par une majuscule. Vous pouvez également les écrire intégralement en majuscules pour les repérer plus facilement.</p>
+					<p class="alinea">Voici une déclaration de constante :</p>
+					<div class="demo_box">
+						<div class="demo_fill">
+							<span class="red">PRIX</span> = 789
+						</div>
+					</div>
+				</article>
+				<article>
+					<h2>Conditions</h2>
+					<h3>If - else</h3>
+					<p class="alinea">La structure en if - else est la plus simple des structures conditionnelles. Elle évalue une expression, si (if) cette condition est remplie, certaines instructions sont exécutées, sinon (else) on en exécute d'autres.</p>
+					<div class="demo_box">
+						<div class="demo_fill">
+							age = 17<br><br>
+							<strong><span class="green">if</span></strong>(age >= 18)<br>
+							<p class="alinea"><span class="green"><strong>then</strong> puts</span> <span class="red">"vous etes majeur"</span></p><br>
+							<p class="alinea"><span class="green"><strong>else</strong> puts</span> <span class="red">"vous etes mineur"</span></p><br>
+							<span class="green">end</span>
+						</div>
+					</div>
+					<p class="alinea">Une structure conditionnelle se termine par le mot-clé end. Celui-ci se situe après la dernière condition. Nous ne sommes pas obligés de placer un else dans la condition ; par exemple, ceci fonctionne :</p>
+					<h3>Elsif</h3>
+					<p class="alinea">La condition vue précédemment peut être davantage enrichie, des choix intermédiaires peuvent être proposés, par test de plusieurs conditions successives (si... alors... sinon si... alors... sinon...). La première condition vérifiée comme étant vraie sera exécutée, les autres seront alors ignorées (même si elles sont vraies, elles aussi).</p>
+					<h3>Unless</h3>
+					<p class="alinea">unless est la condition contraire de if. Elle exécute une instruction sauf si la condition est vérifiée.</p>
+				</article>

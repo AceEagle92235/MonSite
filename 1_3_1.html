@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>L'informatique et son histoire</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+		<meta charset="utf-8"/>
+		<link rel="stylesheet" href="style_index.css"/>
+		<link rel="icon" href=""/>
+	</head>
+	<body>
+		<div id="page">
+      <section>
+  			<h1 id="title" align="center"><strong><U>JavaScript</U></strong></h1>
+        <article>
+  				Les différents articles:
+  				<ol>
+  					<li><a href="#1">Presentation</a></li>
+  					<li><a href="#2">Syntaxe</a></li>
+						<ul>
+							<li><a href="#2_1">Ligne d'instruction</a></li>
+							<li><a href="#2_2">Mots réservés</a></li>
+							<li><a href="#2_3">Variables</a></li>
+						</ul>
+  				</ol>
+  			</article>
+        <article>
+					<h2 id="1">Introduction</h2>
+          <p class="alinea"><strong>JavaScript</strong> est un langage de programmation utilisé initialement par les navigateurs web, dont le champ d’application s’est progressivement étendu aux serveurs web et aux applications graphiques. Il partage avec Java une syntaxe inspirée du langage C, mais leurs similitudes s'arrêtent là. Il fut créé par Netscape sous le nom <em>LiveScript.</em></p>
+          <p class="alinea">Le noyau du JavaScript est aujourd'hui défini par le standard ECMA 262, connu aussi sous l'appellation ECMAScript (ES).</p>
+          <p class="alinea">Intégré directement au sein des pages Web, le JavaScript est alors exécuté par le client Web (par opposition au serveur Web) : c'est le navigateur Web qui prend en charge l'exécution de ces bouts de programme, manipulant leur environnement, appelés scripts.</p>
+          <p class="alinea">Généralement, JavaScript sert à interagir avec le document HTML et ses feuilles de style CSS via l'interface DOM (Document Object Model ; on parle de HTML dynamique ou DHTML pour désigner cette intégration des trois langages). JavaScript est ainsi utilisé pour réaliser des services dynamiques en communication avec le serveur Web, la plupart du temps grâce à une technique appelée (abusivement) AJAX.</p>
+          <p class="alinea">Il est souvent source de difficultés dues aux nombreuses versions différentes de l'interpréteur et du DOM, dépendantes des éditeurs de navigateurs. Chacun ayant développé sa propre variante supportant (presque) le standard ECMAScript, un ou deux des deux standards DOM, et possédant de surcroît des fonctionnalités supplémentaires et incompatibles.</p>
+        </article>
+        <article>
+          <h2 id="2">Syntaxe</h2>
+          <p class="alinea">Les deux grandes structures du langage sont les instructions et les structures de contrôle, qui toutes deux contiennent des expressions.</p>
+          <p class="alinea">La syntaxe du JavaScript est largement inspirée des langages C et Java. Il faut ajouter à cela le fait que la plupart des opérateurs utilisent les mêmes noms ou symboles que dans ces langages.</p>
+          <p class="alinea">L'avantage de cette similarité de forme est qu'elle permet de s'appuyer sur ce que l'on connaît déjà dans ces langages très répandus pour coder ou pour lire en JavaScript, ou réciproquement.</p>
+          <p class="alinea">L'inconvénient est que cette similarité de forme dissimule des différences nombreuses, subtiles ou fondamentales, et des fonctionnalités inexistantes dans les langages classiques auxquels on est tenté de comparer le JavaScript. Et inversement, on peut vouloir appliquer en JavaScript des mots et des syntaxes propres à ces langages qui lui ressemblent, et être déçu de leur absence.</p>
+					<h3 id="2_1">Ligne d'instructions</h3>
+					<p class="alinea">Une instruction JavaScript est constituée d'une combinaison d'expressions (identificateurs, variables, opérateurs, expressions littérales, appels de fonctions), parfois précédée d'une déclaration (var, void). Elle peut être suivie ou entrecoupée de commentaires.</p>
+					<h4>Délimitation des instructions</h4>
+					<p class="alinea">Une instruction s'achève lorsqu'une autre instruction commence.</p>
+					<p class="alinea">En règle générale, on rencontre une ligne d'instruction par ligne de texte. Pour écrire plusieurs instructions sur une même ligne, il est nécessaire de les séparer avec un point-virgule ( ; ). Par habitude, on met souvent des point-virgules à la fin de toutes les instructions en JavaScript mais il faut savoir que leur absence n'est pas une erreur de syntaxe.</p>
+					<div class="demo_box">
+						<div class="demo_title">
+							Juxtaposition d'instructions
+						</div>
+						<div class="demo_fill">
+							s1="trois "; s2="mots ";
+							<br>
+							s3="concaténés"; alert(s1+s2+s3);
+						</div>
+					</div>
+					<p>Les mêmes instructions sur plusieurs lignes, sans point-virgules (JavaScript "comprend" que chaque nouvelle ligne est une instruction différente) :</p>
+					<div class="demo_box">
+						<div class="demo_title">
+							Fin d'instruction automatique en fin de ligne
+						</div>
+						<div class="demo_fill">
+							s1=<span class="red">"trois"</span><br>
+							s2=<span class="red">"mots"</span><br>
+							s3=<span class="red">"concaténés"</span><br>
+							alert(s1+s2+s3)
+						</div>
+					</div>
+					<p>Une instruction répartie sur plusieurs lignes (JavaScript "comprend" que chaque nouvelle ligne prolonge l'instruction)</p>
+					<div class="demo_box">
+						<div class="demo_title">
+							Répartition possible sur plusieurs lignes
+						</div>
+						<div class="demo_fill">
+							<p>alert(</pr>
+    					<span class="red">"trois "</span>
+    					+<span class="red">"mots "</span><br>
+    					+<span class="red">"concaténés"</span>)
+						</div>
+					</div>
+					<p>Intégration de commentaires :</p>
+					<div class="demo_box">
+						<div class="demo_title">
+							Commentaires
+						</div>
+						<div class="demo_fill">
+							alert(	<span class="red">"trois "</span> <span class="commentaires">// Commentaire en fin de ligne</span><br>
+							+ <span class="red">"mots "</span> <span class="commentaires">/* Commentaire multiligne */</span><br>
+							+ <span class="commentaires">/* peut être placé au milieu d'une instruction */</span> <span class="red">"concaténés"</span><br>
+							);
+						</div>
+					</div>
+					<h4>Regroupement des lignes d'instructions en blocs</h43>
+					<p>Les lignes d'instructions sont regroupées en blocs d'instructions délimités par des accolades.</p>
+					<p><strong>Note:</strong>JavaScript <strong>différencie les majuscules et les minuscules</strong>. Il convient donc d'être vigilant sur ce point lors de l'écriture des lignes d'instructions pour s'éviter de longues séances de débogage.</p>
+					<hr>
+					<h3 id="2_2">Mots réservés</h3>
+					<p>Cet article va passer en revue les mots réservés et constantes prédéfinies de JavaScript.</p>
+					<p>La norme ECMA 262, définit les mots réservés de JavaScript en deux catégories :</p>
+					<ul>
+						<li>Les mots réservés</li>
+						<li>les futurs mots réservés</li>
+					</ul>
+					<p>On ne doit pas utiliser un mot réservé comme identificateur. Cela provoque une erreur. Mais comme le langage différencie les majuscules et minuscules, il est possible de mettre en majuscule une lettre pour rendre l'identificateur utilisable.</p>
+					<p>On peut, avec la plupart des navigateurs utiliser un futur mot réservé comme identificateur, mais cela est déconseillé, car le programme ne fonctionnera probablement plus à l'apparition d'une version future de JavaScript.</p>
+					<div class="demo_box"><div class="demo_fill"><p>Voici une description sommaire des mots réservés :</p>
+					<hr>
+					<li>Déclaration</li>
+					var; const; let; function; void; with
+					<hr>
+					<li>Structures de controle</li>
+					return; if; else; switch; case; break; default; for; do; while; continue
+					<hr>
+					<li>Gestion des erreurs</li>
+					throw; try...catch...finally
+					<hr>
+					<li>Opérateurs</li>
+					in; new; instanceof; typeof; delete
+					<hr>
+					<li>Valeurs spéciales</li>
+					this; true; false; null; undefined
+					</ol></div>
+					<div class="demo_fill"><p>Voici une liste des futurs mots réservés :</p>
+					<p>abstract; enum; int; short; boolean; export; interface; static; byte; extends; long; super; char; final; native; class; float; package; const; goto; private; debugger; implements; protected; double; import; public</p></div></div>
+					<hr>
+					<h3 id="3">Variables</h3>
+					<p>Il est donc possible de déclarer une variable sans lui définir de type. Ou plutôt, une variable déclarée de telle manière sera du type undefined.</p>
+					<p>Tout au long de son utilisation, cette variable pourra changer de type sans que l'interpréteur n'y trouve rien à redire.</p>
+					<div class="demo_box">
+						<div class="demo_fill">
+							var ma_variable; // est undefined <br>
+							ma_variable = "Je deviens une chaîne"; // devient string <br>
+							ma_variable = 5; // devient number <br>
+							ma_variable = new Array(); // devient object
+						</div>
+					</div>
+					<p>Il n'est en fait pas nécessaire de déclarer une variable (avec le mot-clé var). La différence est expliquée ci-après.</p>
+					<h4>Identificateur</h4>
+					<p>Les règles d'élaboration des identificateurs sont décrites à ce lien. Pour résumer, les identificateurs comportent des caractères alphanumériques et le tiret soulignant (_). Ils ne peuvent commencer par un chiffre, et les majuscules comptent.</p>
+					<h4>Portée</h4>
+					<p>L'instanciation directe (sans mot-clé var) d'un objet avec un identificateur donne souvent l'impression de créer une variable globale. En réalité, la notion de "variable globale" n'existe pas en JavaScript. Toutes les variables sont, sauf quand on les déclare avec <strong>var</strong>, des propriétés d'un objet. Par défaut, cet objet est implicitement l'objet <strong>window</strong> (et non, <strong>window</strong> n'est pas une variable globale qui ferait exception à la règle car il est une de ses propres propriétés, c'est-à-dire que <strong>window</strong> est une propriété de <strong>window</strong>).</p>
+					<p>Comme window reste l'objet implicite la plupart du temps, une variable créée ainsi pourra être employée comme si elle était globale :</p>
+					<div class="demo_box">
+						<div class="demo_fill">
+							ma_variable = "une valeur";<br>
+							<br>
+							function maFonction()<br>
+							{<br>
+							mon_autre_variable = "une autre valeur"<br>
+							}<br>
+							<br>
+							maFonction()<br>
+							alert(mon_autre_variable) // affiche "une autre valeur"
+						</div>
+					</div>
+
+
+
+
+				</article>
