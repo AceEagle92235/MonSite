@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>L'informatique et son histoire</title>
+		<meta charset="utf-8"/>
+		<link rel="stylesheet" href="style_index.css"/>
+		<script language="JavaScript">
+
+var rep = new Array;
+
+var faite = new Array;
+
+var score = 0;
+
+rep[1] = "b";
+
+rep[2] = "b";
+
+rep[3] = "b";
+
+rep[4] = "a";
+
+rep[5] = "c";
+
+rep[6] = "c";
+
+rep[7] = "a";
+
+rep[8] = "d";
+
+rep[9] = "b";
+
+rep[10] = "b";
+
+
+
+function truc(){
+alert("c'est un point de vue");
+}
+function Engine(question, reponse) {
+if (reponse != rep[question]) {
+if (!faite[question]) {
+alert("Faux !!   La bonne réponse était en - " + rep[question] + " -");
+}
+else {
+alert("Tu as déjà répondu à cette question !");
+}
+ }
+else {
+if (!faite[question]) {
+faite[question] = -1;
+score++;
+alert("Bonne réponse !! ");
+}
+else {
+alert("Tu as déjà répondu à cette question !");
+    }
+  }
+}
+function NextLevel () {
+        if (score > 10) {
+        alert("Tricheur !");
+}
+        if (score > 8 && score <= 10) {
+        alert(score + "/10. " + "Un coup de maître !");
+}
+        if (score > 6 && score <= 8) {
+				alert(score + "/10. " + "Bien, mais... pas parfait.");
+}
+        if (score >= 4 && score < 6) {
+        alert(score + "/10. " + "Pas terrible... un autre essai ?");
+}
+        if (score < 4) {
+			  alert(score + "/10. " + "Il faut refaire l'exercice");
+}
+faite= new Array;
+
+score = 0;
+document.quest.reset();
+}
+</script>
+	</head>
+	<body>
+		<article>
+<br><form name="quest">
+	<p>1)première question en quel version est actuellement html?(facile)
+<br><input type="radio" name="1" value="a" onclick="Engine(1, this.value)"><font color="#FF0000">a.
+</font><font color="#330033">html 4</font>
+<br><input type="radio" name="1" value="b" onclick="Engine(1, this.value)"><font color="#FF0000">b.
+</font><font color="#330033">html 5</font>
+<br><input type="radio" name="1" value="c" onclick="Engine(1, this.value)"><font color="#FF0000">c.
+</font><font color="#330033">html 7</font>
+<br><input type="radio" name="1" value="d" onclick="Engine(1, this.value)"><font color="#FF0000">d.
+</font><font color="#330033">html -42</font>
+
+	<p>2)l'html permet de faire quoi?
+<br><input type="radio" name="2" value="a" onclick="Engine(2, this.value)"><font color="#FF0000">a.
+</font><font color="#330033">feur</font>
+<br><input type="radio" name="2" value="b" onclick="Engine(2, this.value)"><font color="#FF0000">b.
+</font><font color="#330033">de mettre en forme le contenu</font>
+<br><input type="radio" name="2" value="c" onclick="Engine(2, this.value)"><font color="#FF0000">c.
+</font><font color="#330033">de faire des animations</font>
+<br><input type="radio" name="2" value="d" onclick="Engine(2, this.value)"><font color="#FF0000">d.
+</font><font color="#330033">de faire des logiciels</font>
+
+<p>3)quand est apparut le css?
+<br><input type="radio" name="3" value="a" onclick="Engine(3, this.value)"><font color="#FF0000">a.
+</font><font color="#330033">17 décembre 1990</font>
+<br><input type="radio" name="3" value="b" onclick="Engine(3, this.value)"><font color="#FF0000">b.
+</font><font color="#330033">17 décembre 1996</font>
+<br><input type="radio" name="3" value="c" onclick="Engine(3, this.value)"><font color="#FF0000">c.
+</font><font color="#330033">17 septembre 1997</font>
+<br><input type="radio" name="3" value="d" onclick="Engine(3, this.value)"><font color="#FF0000">d.
+</font><font color="#330033">17 décembre 1995</font>
+
+<p>4)Que signifie css?
+<br><input type="radio" name="4" value="a" onclick="Engine(4, this.value)"><font color="#FF0000">a.
+</font><font color="#330033">cascading style sheets</font>
+<br><input type="radio" name="4" value="b" onclick="Engine(4, this.value)"><font color="#FF0000">b.
+</font><font color="#330033">canard sans saveurs</font>
+<br><input type="radio" name="4" value="c" onclick="Engine(4, this.value)"><font color="#FF0000">c.
+</font><font color="#330033">complémentaire santé solidaire</font>
+<br><input type="radio" name="4" value="d" onclick="Engine(4, this.value)"><font color="#FF0000">d.
+</font><font color="#330033">cataract system skin</font>
+
+<p>5)Avec quoi javascript intéragit-il?
+<br><input type="radio" name="5" value="a" onclick="Engine(5, this.value)"><font color="#FF0000">a.
+</font><font color="#330033">l'html</font>
+<br><input type="radio" name="5" value="b" onclick="Engine(5, this.value)"><font color="#FF0000">b.
+</font><font color="#330033">le css</font>
+<br><input type="radio" name="5" value="c" onclick="Engine(5, this.value)"><font color="#FF0000">c.
+</font><font color="#330033">les 2</font>
+<br><input type="radio" name="5" value="d" onclick="Engine(5, this.value)"><font color="#FF0000">d.
+</font><font color="#330033">les 2 + java</font>
+
+<p>6)La syntaxe du JavaScript est largement inspirée des quels langage?
+<br><input type="radio" name="6" value="a" onclick="Engine(6, this.value)"><font color="#FF0000">a.
+</font><font color="#330033">Java</font>
+<br><input type="radio" name="6" value="b" onclick="Engine(6, this.value)"><font color="#FF0000">b.
+</font><font color="#330033">les langages c</font>
+<br><input type="radio" name="6" value="c" onclick="Engine(6, this.value)"><font color="#FF0000">c.
+</font><font color="#330033">les 2</font>
+
+<p>7)le php est un langage de programmation ?
+<br><input type="radio" name="7" value="a" onclick="Engine(7, this.value)"><font color="#FF0000">a.
+</font><font color="#330033">coté serveur</font>
+<br><input type="radio" name="7" value="b" onclick="Engine(7, this.value)"><font color="#FF0000">b.
+</font><font color="#330033">coté client</font>
+
+<p>8)combien de sites web utilisent le langage PHP sous ses différentes versions ?
+<br><input type="radio" name="8" value="a" onclick="Engine(8, this.value)"><font color="#FF0000">a.
+</font><font color="#330033">90%</font>
+<br><input type="radio" name="8" value="b" onclick="Engine(8, this.value)"><font color="#FF0000">b.
+</font><font color="#330033">75%</font>
+<br><input type="radio" name="8" value="c" onclick="Engine(8, this.value)"><font color="#FF0000">c.
+</font><font color="#330033">85%</font>
+<br><input type="radio" name="8" value="d" onclick="Engine(8, this.value)"><font color="#FF0000">d.
+</font><font color="#330033">80%</font>
+
+<p>9)quand a été créé le SQL?
+<br><input type="radio" name="9" value="a" onclick="Engine(9, this.value)"><font color="#FF0000">a.
+</font><font color="#330033">1979</font>
+<br><input type="radio" name="9" value="b" onclick="Engine(9, this.value)"><font color="#FF0000">b.
+</font><font color="#330033">1974</font>
+<br><input type="radio" name="9" value="c" onclick="Engine(9, this.value)"><font color="#FF0000">c.
+</font><font color="#330033">1986</font>
+<br><input type="radio" name="9" value="d" onclick="Engine(9, this.value)"><font color="#FF0000">d.
+</font><font color="#330033">1982</font>
+
+<p>10)Quels et le but de l'initiative leland?
+<br><input type="radio" name="10" value="a" onclick="Engine(10, this.value)"><font color="#FF0000">a.
+</font><font color="#330033">développer internet dans le monde</font>
+<br><input type="radio" name="10" value="b" onclick="Engine(10, this.value)"><font color="#FF0000">b.
+</font><font color="#330033">développer internet en Afrique</font>
+<br><input type="radio" name="10" value="c" onclick="Engine(10, this.value)"><font color="#FF0000">c.
+</font><font color="#330033">développer l'apprentissage des langages de programmation</font>
+<br><input type="radio" name="10" value="d" onclick="Engine(10, this.value)"><font color="#FF0000">d.
+</font><font color="#330033">développer internet en Asie</font>
+<br>&nbsp;
+<p><input type="button" name="Resultats" value="Résultats" onclick="NextLevel()">
+<br>&nbsp;
+<p></form>
+</article>
+</body>

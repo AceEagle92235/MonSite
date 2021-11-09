@@ -1,0 +1,142 @@
+body{
+ background-image:url(image/background.gif);
+ background-attachment:fixed;
+ background-size: 100%;
+}
+#page{
+	display:flex;
+	flex-direction : row;
+  font-family: helvetica;
+}
+#menu{
+	display:block;
+	background-color:grey;
+	width: auto;
+	height:100%;
+	padding-top:7%;
+	padding-right : 1%;
+	padding-left : 1%;
+	border:2px solid black;
+  height: auto;
+}
+#menu ul::after{
+	display: table;
+	clear: both;
+}
+#menu a{
+	display: block;
+	text-decoration: none;
+	color: black;
+	border-bottom: 2px solid transparent;
+	padding: 5px 0px;
+}
+#menu a:hover{
+	color:orange;
+}
+
+#nav_page ol::after{
+	display: table;
+	clear: both;
+}
+#nav_page a{
+	display: block;
+	text-decoration: none;
+	color: black;
+	border-bottom: 2px solid transparent;
+	padding: 5px 0px;
+}
+#nav_page a:hover{
+	color:orange;
+}
+#title{
+	color:white;
+	font-size:50px;
+}
+section{
+  display:block;
+	margin-left: 5px;
+	padding-left : 5px;
+}
+article{
+	background-color:silver;
+	font-size:20px;
+	margin-top:1%;
+	border:2px solid grey;
+	color:black;
+  padding:1%;
+}
+footer{
+	font-size:15px;
+	color:black;
+	height:auto;
+	background-color:grey;
+	margin-top:5px;
+	border:2px solid black;
+}
+#image{
+	font-size:12px;
+	color:black;
+	width:220px;
+	height:auto;
+	border:1px solid black;
+	position:center;
+}
+#big_image{
+  font-size:16px;
+	color:black;
+	width:512px;
+	height:auto;
+	border:2px solid black;
+	position:center;
+}
+.alinea {
+  text-indent: 20px;
+}
+.demo_box {
+  background-color:#E4ECEA;
+  border:1px solid grey;
+  padding: 0.2%;
+  width: 350px;
+  text-align: left;
+  margin-left: 2%
+}
+.demo_title{
+  background-color:#B9D3CE;
+  border:1px solid grey;
+  padding:0.6%;
+}
+.demo_fill{
+  background-color: white;
+  border: 1px solid #B9D3CE;
+  margin-top: 0.4%;
+  padding:0.6%;
+  font-size:15px;
+  font-family: sans-serif;
+}
+.demo_box2 {
+  background-color:#E4ECEA;
+  border:1px solid grey;
+  padding: 0.2%;
+  width: 500px;
+  text-align: left;
+  margin-left: 2%
+}
+.red{
+  color: red;
+}
+.commentaires{
+  color: green;
+}
+.green{
+  color: green;
+}
+.text{
+  border: 1px solid green;
+  padding: 0.6%;
+  margin-bottom: 0.4%;
+}
+.text2{
+  border: 1px solid blue;
+  padding: 0.6%;
+  margin-bottom: 0.4%;
+}
